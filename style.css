@@ -11,23 +11,36 @@
     height: 100vh;
     /* background: #e3f9ff; */
     background-image: url(adj.jpg);
-    background-position: 100%;
+    /* background-position: 100%; */
     background-size: contain;
     background-attachment: fixed; 
     display: flex;
     align-items: center;
     justify-content: center;
+    
+        max-width: 100%
 }
 
-.calculator {
+/* .calculator {
     background-color: #3a4452;
     padding: 20px;
     border-radius: 10px;
 
+} */
+
+.calculator {
+    background-color: #3a4452;
+    padding: 20px 20px 20px 20px;
+    border-radius: 10px;
+    overflow-y: auto; 
+    max-height: 100vh; 
 }
 
+.calculator::-webkit-scrollbar {
+    width: 10px; }
+
 .calculator form input {
-    border: 0;
+    border: 1;
     outline: 0;
     width: 60px;
     height: 60px;
@@ -51,6 +64,7 @@ form .display input {
     flex: 1;
     font-size: 45px;
     box-shadow: none;
+    margin-right: 0px
 }
 
 form div .equal {
@@ -59,4 +73,13 @@ form div .equal {
 
 form input.operator {
     color: #ff8933;
+    padding: 20px;
+}
+
+.calculator form .row {
+    margin-bottom: 10px; /* Add some spacing between rows */
+}
+
+.calculator form input.btn-block {
+    width: 100%; /* Make buttons occupy 100% width */
 }
